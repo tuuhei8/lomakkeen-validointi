@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body class="container">
+    <h1>Rekisteröitymislomake</h1>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Käyttäjä ID:</p>
+      <form class="col-4">
+        <input class="pakollinen" id="kayttaja" type="text">
+        <div id="kNimi"></div>
+      </form>
+    </div>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Salasana:</p>
+      <form class="col-4">
+        <input class="pakollinen" id="sSana" type="text">
+        <div id="ssPituus"></div>
+      </form>
+    </div>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Nimi:</p>
+      <form class="col-4" name="nimi">
+        <input class="pakollinen" type="text">
+      </form>
+    </div>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Osoite:</p>
+      <form class="col-4" name="osoite">
+        <input class="pakollinen" type="text">
+      </form>
+    </div>
+    <div  class="row mt-4">
+      <label class="col-2 d-flex justify-content-end" for="maa">Maa:</label>
+      <div class="col-4">
+        <select name="maa" id="maa">
+          <option value="valitse">(Valitse maa)</option>
+          <option value="suomi">Suomi</option>
+          <option value="muu">Muu kuin Suomi</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Postinumero:</p>
+      <form class="col-4">
+        <input class="pakollinen" id="pNumero" type="text">
+        <div id="pNumeroVaroitus"></div>
+      </form>
+    </div>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Sähköposti:</p>
+      <form class="col-4">
+        <input class="pakollinen" id="sPosti" type="text">
+        <div id="sPostiVaroitus"></div>
+      </form>
+    <div class="row mt-4">
+      <p class="col-2 d-flex justify-content-end">Sukupuoli:</p>
+      <form class="col-4">
+        <input type="radio" id="mies" name="sukupuoli" value="1">
+        <label for="mies">Mies</label>
+        <input type="radio" id="nainen" name="sukupuoli" value="2">
+        <label for="nainen">Nainen</label>
+        <div id="sPuoliVaroitus">
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <p class="col-2 d-flex justify-content-end">Kieli:</p>
+      <form class="col-6" id="kieli">
+        <input type="checkbox" name="kieli" value="1" id="suomi">
+        <label for="suomi">Suomi</label>
+        <input type="checkbox" name="kieli" value="2" id="muu">
+        <label for="muu">Muu kuin suomi</label>
+        <div id="kieliVaroitus"></div>
+      </form>
+    </div>
+    <div class="row mb-4">
+      <p class="col-2 d-flex justify-content-end">Lisätietoja:</p>
+      <form class="col-4">
+        <textarea name="lisatietoja" id="lisatietoja" rows="7" cols="50"></textarea>
+      </form>
+    </div>
+    <div class="mb-4">
+      <button onclick="validoi()">Lähetä</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
